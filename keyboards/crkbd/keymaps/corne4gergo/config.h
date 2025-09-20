@@ -20,10 +20,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-//#define USE_MATRIX_I2C
-
-//#define QUICK_TAP_TERM 0
-//#define TAPPING_TERM 100
+/* Fire combos only from the ADJUST layer (layer 3 in your map) */
+#define COMBO_ONLY_FROM_LAYER 3
+/* Make cross-half chords reliable on a split board */
+#define SPLIT_COMBO_ENABLE
+/* Time window for the chord (tune 35–60 ms if needed) */
+#define COMBO_TERM 50
+#define PERMISSIVE_HOLD
+// #define QUICK_TAP_TERM 175
+#define TAPPING_TERM 225
+// #define TAPPING_TERM_PER_KEY
 
 #ifdef RGBLIGHT_ENABLE
     #define RGBLIGHT_EFFECT_BREATHING
